@@ -1,0 +1,98 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1{
+  font-size: 1rem;
+}
+
+.app-main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-input{
+  height: 20px;
+  margin: 20px;
+  width: 200px;
+}
+
+.app-image{
+  margin: 20px;
+  height: 300px;
+  width: 300px;
+}
+
+.app-actions{
+  display: flex;
+  flex-direction: row;
+}
+
+button {
+  margin: 10px;
+}
+
+.app-loader {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  color: inherit;
+  vertical-align: middle;
+  pointer-events: none;
+  border: 0 solid transparent;
+  border-radius: 50%;
+  position: relative;
+}
+.app-loader:before, .app-loader:after {
+  content: "";
+  border: 0.2em solid currentcolor;
+  border-radius: 50%;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: app-loader 1s linear infinite;
+  animation: app-loader 1s linear infinite;
+  opacity: 0;
+}
+.app-loader:before {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.app-loader:after {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+@-webkit-keyframes app-loader {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes app-loader {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
