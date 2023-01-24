@@ -1,8 +1,8 @@
 import {useState} from 'react'
-import './App.css'
+import './Image.css'
 import {Configuration, OpenAIApi} from "openai"
 
-function App() {
+function Image() {
     const [prompt, setPrompt] = useState('')
     const [result, setResult] = useState('')
     const [clicked, setClicked] = useState(false)
@@ -45,4 +45,4 @@ function App() {
     </div>)
 }
 
-export default App
+export default Image
